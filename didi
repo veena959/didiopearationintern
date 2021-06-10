@@ -1,0 +1,29 @@
+use didi
+select 60 * COUNT(distinct Driver_id)  from [dbo].[didiassessment] where [Average_Rating] > 4.7
+and [Online_time] > 6
+
+use didi
+select 5 * (SUM([completed_order])) from [dbo].[didiassessment] where [completed_order] > 5
+and [Average_Rating] > 4.7
+
+
+use didi
+select COUNT(distinct Driver_id)  from [dbo].[didiassessment] where [Average_Rating] > 4.7
+and [Online_time] > 6
+
+use didi
+select COUNT(distinct Driver_id) from [dbo].[didiassessment] where [completed_order] > 5
+and [Average_Rating] > 4
+
+--use didi
+--select * from didi2
+--select sum((completed_order * re)) as totalrewards
+--from [dbo].[didi2]
+--select SUM(totalrewards) from [dbo].[didi2]
+--select Average_Rating, Online_time,re60 from [dbo].[didiassessment]
+--where average_rating > 4.7 
+--	and online_time > 6 
+--select completed_order, average_rating, re, totalrewards from [dbo].[didi2]
+--select SUM(completed_order) from [dbo].[didi2]
+
+
